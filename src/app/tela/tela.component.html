@@ -1,0 +1,17 @@
+<h2>Delivery Supermercado Inter de Vista Alegre</h2>
+<img src="assets/download.jpg">
+<div>
+  <p>Faça suas compras no conforto do seu lar que nós entregamos para você!</p>
+  <form class="example-form">
+  <input type="text"
+         placeholder="Search for a street"
+         [formControl]="control"
+         [matAutocomplete]="auto"
+         class="example-input">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+      {{street}}
+    </mat-option>
+  </mat-autocomplete>
+</form>
+</div>
